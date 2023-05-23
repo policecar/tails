@@ -1,7 +1,3 @@
-import warnings
-
-import torch
-
 """
 Centered softplus, a variant of softplus that's centered around 0.
 
@@ -13,6 +9,9 @@ Source: https://github.com/kylematoba/lcnn/blob/main/models/psoftplus.py
 Paper:  Efficient Training of Low-Curvature Neural Networks
         https://openreview.net/forum?id=2B2xIJ299rx
 """
+
+import warnings
+import torch
 
 
 class ParametricSoftplus(torch.nn.Module):
