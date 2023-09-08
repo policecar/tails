@@ -37,5 +37,6 @@ class ParametricSoftplus(torch.nn.Module):
         # https://pytorch.org/docs/stable/generated/torch.nn.Softplus.html
         beta = self.log_beta.exp()
         beta_x = (beta + self.eps) * x
-        y = (torch.nn.functional.softplus(beta_x, beta=1.0, threshold=self.threshold) - self.offset) / (beta + self.eps)
+        y = (torch.nn.functional.softplus(beta_x, beta=1.0, threshold=self.threshold)
+             - self.offset) / (beta + self.eps)
         return y
